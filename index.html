@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Memory We Lost — a psychological thriller by Midnight Scribbler.">
+  <title>The Memory We Lost — Midnight Scribbler</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.7;
+    }
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 50px 22px;
+      background:
+        radial-gradient(circle at 70% 20%, rgba(120,0,0,.22), transparent 32%),
+        linear-gradient(135deg, #080808, #1a1a1a 55%, #090909);
+    }
+    .hero-inner {
+      width: min(1100px, 100%);
+      display: grid;
+      grid-template-columns: minmax(280px, 430px) 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+    .cover {
+      width: 100%;
+      max-width: 430px;
+      display: block;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.65);
+    }
+    .eyebrow {
+      color: #d63b35;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: .95;
+      margin: 0 0 18px;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+    .author {
+      font-size: 20px;
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+    .tagline {
+      font-size: 22px;
+      font-style: italic;
+      color: #ddd;
+      max-width: 650px;
+    }
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 28px 0 18px;
+    }
+    .buy {
+      display: inline-block;
+      background: #b92320;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: transform .15s, background .15s;
+    }
+    .buy:hover { background: #d52c28; transform: translateY(-2px); }
+    .note {
+      color: #999;
+      font-size: 13px;
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+    }
+    section {
+      padding: 85px 22px;
+      border-top: 1px solid #292929;
+    }
+    .container { width: min(900px, 100%); margin: auto; }
+    h2 {
+      font-size: 38px;
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .description { font-size: 18px; color: #ccc; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .feature {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      padding: 22px;
+      border-radius: 5px;
+    }
+    .feature strong { color: #fff; display: block; margin-bottom: 5px; }
+    footer {
+      padding: 35px 22px;
+      text-align: center;
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      border-top: 1px solid #292929;
+    }
+    @media (max-width: 800px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 35px; }
+      .hero { padding-top: 35px; }
+      .hero-copy { text-align: center; }
+      .tagline { margin-left: auto; margin-right: auto; }
+      .features { grid-template-columns: 1fr; }
+      .cover { max-width: 360px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <img class="cover" src="cover.png" alt="The Memory We Lost book cover">
+      <div class="hero-copy">
+        <div class="eyebrow">A psychological thriller by Midnight Scribbler</div>
+        <h1>The Memory<br>We Lost</h1>
+        <div class="author">by Midnight Scribbler</div>
+        <p class="tagline">Some memories aren't lost. They were taken.</p>
+        <div class="price">₹99</div>
+
+        <!-- PAYMENT BUTTON:
+             Replace # below with your Razorpay payment link later. -->
+        <a class="buy" href="#" onclick="alert('Payment will be connected here in the next step.'); return false;">
+          BUY THE NOVEL — ₹99
+        </a>
+        <div class="note">Digital PDF • 40 fast-moving chapters</div>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <div class="container">
+      <h2>The Story</h2>
+      <p class="description">
+        The Memory We Lost is a fast-paced psychological thriller centered on Ethan Carter,
+        a man forced to confront a past he has no memory of surviving. The night begins at
+        2:17 a.m. when Ethan receives a cryptic call and unsettling text messages from an
+        unknown sender warning him not to return to an old, isolated estate known as Blackwood.
+        Along with the warning comes a photograph of his own car parked outside the mysterious
+        house — and wet footprints left inside his apartment.
+      </p>
+      <p class="description">
+        Driven to uncover the truth, Ethan teams up with his neighbor Daniel and a woman from
+        his past, Claire. Together, they are drawn back to Blackwood and a hidden basement
+        facility known as "Room 17". As they navigate a trail of cassette tapes, classified
+        documents, and encrypted files linked to a covert initiative called "Project 17",
+        Ethan discovers that his memories were deliberately altered and that every answer
+        leads back to October 14, 2012.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Inside the Book</h2>
+      <div class="features">
+        <div class="feature">
+          <strong>Genre</strong>
+          Psychological Thriller / Mystery / Suspense
+        </div>
+        <div class="feature">
+          <strong>Core Themes</strong>
+          Altered memories, family secrets, corporate conspiracies, and identity
+        </div>
+        <div class="feature">
+          <strong>Format</strong>
+          Digital PDF
+        </div>
+        <div class="feature">
+          <strong>Chapters</strong>
+          40 fast-moving chapters
+        </div>
+        <div class="feature">
+          <strong>Price</strong>
+          ₹99
+        </div>
+        <div class="feature">
+          <strong>For Readers Who Like</strong>
+          Dark suspense, memory-puzzle mysteries, and fast-paced thrillers
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Midnight Scribbler · The Memory We Lost
+  </footer>
+
+</body>
+</html>
