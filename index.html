@@ -270,11 +270,11 @@
     }
 
     window.location.href = result.download_url;
-
-  } catch (error) {
-    console.error(error);
-    alert("Payment was received, but we could not prepare your download. Please contact us.");
-  }
+} catch (error) {
+  console.error(error);
+  alert("Download error: " + error.message);
+}
+ 
 },
 
         theme: {
