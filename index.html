@@ -146,9 +146,9 @@
 
         <!-- PAYMENT BUTTON:
              Replace # below with your Razorpay payment link later. -->
-        <a class="buy" href="https://rzp.io/rzp/H0embmX" target="_blank" rel="noopener noreferrer">
+       <button class="buy" id="buyButton" type="button">
   BUY THE NOVEL — ₹9
-</a>
+</button>
         <div class="note">Digital PDF • 40 fast-moving chapters</div>
       </div>
     </div>
@@ -211,6 +211,68 @@
   <footer>
     © 2026 Midnight Scribbler · The Memory We Lost
   </footer>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
+<script>
+  document.getElementById("buyButton").addEventListener("click", async function () {
+    const button = this;
+
+    button.disabled = true;
+    button.textContent = "Preparing payment...";
+
+    try {
+      const response = await fetch(
+        "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/create-order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({})
+        }
+      );
+
+      const order = await response.json();
+
+      if (!response.ok) {
+        throw new Error(order.error || "Unable to create order");
+      }
+
+      const options = {
+        key: order.key_id,
+        amount: order.amount,
+        currency: order.currency,
+        name: "Midnight Scribbler",
+        description: "The Memory We Lost — PDF",
+        order_id: order.order_id,
+
+        handler: function (response) {
+          window.location.href =
+            "https://midnight-scribbler.github.io/success.html";
+        },
+
+        theme: {
+          color: "#b92320"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+
+      rzp.on("payment.failed", function () {
+        button.disabled = false;
+        button.textContent = "BUY THE NOVEL — ₹9";
+        alert("Payment failed. Please try again.");
+      });
+
+      rzp.open();
+
+    } catch (error) {
+      console.error(error);
+      alert("Unable to start payment. Please try again.");
+      button.disabled = false;
+      button.textContent = "BUY THE NOVEL — ₹9";
+    }
+  });
+</script>
 </body>
 </html>
