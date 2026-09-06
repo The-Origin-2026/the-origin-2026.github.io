@@ -266,7 +266,7 @@
     const result = await verifyResponse.json();
 
     if (!verifyResponse.ok || !result.success) {
-      throw new Error(result.error || "Payment verification failed");
+      throw new Error(JSON.stringify(result));
     }
 
     window.location.href = result.download_url;
