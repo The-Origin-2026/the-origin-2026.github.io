@@ -1,13 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Memory We Lost — a psychological thriller by Midnight Scribbler.">
-  <title>The Memory We Lost — Midnight Scribbler</title>
+
+  <meta name="description" content="The Origin 2026 — a collection of stories and novels by Midnight Scribbler.">
+
+  <title>The Origin 2026 — Books</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
@@ -15,105 +25,248 @@
       color: #eee;
       line-height: 1.7;
     }
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 50px 22px;
-      background:
-        radial-gradient(circle at 70% 20%, rgba(120,0,0,.22), transparent 32%),
-        linear-gradient(135deg, #080808, #1a1a1a 55%, #090909);
+
+    /* HEADER */
+
+    header {
+      padding: 28px 22px;
+      border-bottom: 1px solid #292929;
+      background: #0b0b0b;
+      text-align: center;
     }
-    .hero-inner {
-      width: min(1100px, 100%);
-      display: grid;
-      grid-template-columns: minmax(280px, 430px) 1fr;
-      gap: 65px;
-      align-items: center;
-    }
-    .cover {
-      width: 100%;
-      max-width: 430px;
-      display: block;
-      margin: auto;
-      border-radius: 5px;
-      box-shadow: 0 25px 70px rgba(0,0,0,.65);
-    }
-    .eyebrow {
-      color: #d63b35;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
+
+    .brand {
+      font-size: 30px;
       font-weight: bold;
-      margin-bottom: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
-    h1 {
-      font-size: clamp(48px, 7vw, 88px);
+
+    .brand-subtitle {
+      color: #888;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+
+    .store-hero {
+      padding: 90px 22px 70px;
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(120,0,0,.22),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #080808,
+          #1a1a1a 55%,
+          #090909
+        );
+    }
+
+    .store-hero h1 {
+      font-size: clamp(48px, 8vw, 86px);
       line-height: .95;
-      margin: 0 0 18px;
+      margin: 0 0 20px;
       letter-spacing: -2px;
       text-transform: uppercase;
     }
-    .author {
-      font-size: 20px;
-      color: #bbb;
-      margin-bottom: 25px;
-    }
-    .tagline {
-      font-size: 22px;
-      font-style: italic;
-      color: #ddd;
+
+    .store-hero p {
       max-width: 650px;
+      margin: auto;
+      color: #bbb;
+      font-size: 20px;
     }
-    .price {
-      font-size: 30px;
+
+    /* BOOK SECTION */
+
+    .books-section {
+      padding: 80px 22px;
+    }
+
+    .section-title {
+      width: min(1100px, 100%);
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .section-title p {
+      color: #888;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    /* BOOK GRID */
+
+    .books-grid {
+      width: min(1100px, 100%);
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .book-card {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      border-color: #444;
+    }
+
+    .book-cover-container {
+      background: #0c0c0c;
+      padding: 25px;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: auto;
+      border-radius: 4px;
+      box-shadow: 0 20px 45px rgba(0,0,0,.6);
+    }
+
+    .book-info {
+      padding: 28px;
+    }
+
+    .book-genre {
+      color: #d63b35;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-family: Arial, sans-serif;
       font-weight: bold;
-      margin: 28px 0 18px;
+      margin-bottom: 8px;
     }
+
+    .book-title {
+      font-size: 30px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+    }
+
+    .book-author {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .book-description {
+      color: #bbb;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .book-price {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
     .buy {
+      width: 100%;
       display: inline-block;
       background: #b92320;
       color: white;
+      border: none;
       text-decoration: none;
-      padding: 15px 30px;
+      padding: 14px 20px;
       border-radius: 4px;
       font-family: Arial, sans-serif;
       font-weight: bold;
       letter-spacing: 1px;
-      transition: transform .15s, background .15s;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
     }
-    .buy:hover { background: #d52c28; transform: translateY(-2px); }
-    .note {
-      color: #999;
-      font-size: 13px;
-      margin-top: 10px;
+
+    .buy:hover {
+      background: #d52c28;
+      transform: translateY(-2px);
+    }
+
+    .buy:disabled {
+      opacity: .6;
+      cursor: wait;
+      transform: none;
+    }
+
+    .book-note {
+      color: #777;
+      font-size: 12px;
       font-family: Arial, sans-serif;
+      margin-top: 10px;
+      text-align: center;
     }
-    section {
-      padding: 85px 22px;
-      border-top: 1px solid #292929;
+
+    /* COMING SOON CARD */
+
+    .coming-soon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #141414,
+          #1b1b1b
+        );
     }
-    .container { width: min(900px, 100%); margin: auto; }
-    h2 {
-      font-size: 38px;
-      margin-top: 0;
+
+    .coming-soon-content {
+      padding: 30px;
+    }
+
+    .coming-soon-content span {
+      color: #d63b35;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      letter-spacing: 2px;
     }
-    .description { font-size: 18px; color: #ccc; }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 30px;
+
+    .coming-soon-content h3 {
+      font-size: 28px;
+      margin: 12px 0;
+      text-transform: uppercase;
     }
-    .feature {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      padding: 22px;
-      border-radius: 5px;
+
+    .coming-soon-content p {
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
     }
-    .feature strong { color: #fff; display: block; margin-bottom: 5px; }
+
+    /* FOOTER */
+
     footer {
       padding: 35px 22px;
       text-align: center;
@@ -122,183 +275,359 @@
       font-size: 13px;
       border-top: 1px solid #292929;
     }
-    @media (max-width: 800px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 35px; }
-      .hero { padding-top: 35px; }
-      .hero-copy { text-align: center; }
-      .tagline { margin-left: auto; margin-right: auto; }
-      .features { grid-template-columns: 1fr; }
-      .cover { max-width: 360px; }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .store-hero {
+        padding-top: 65px;
+      }
+
+      .store-hero h1 {
+        font-size: 48px;
+      }
+
+      .book-cover-container {
+        padding: 30px;
+      }
+
+      .coming-soon {
+        min-height: 350px;
+      }
     }
   </style>
+
 </head>
+
 <body>
 
-  <main class="hero">
-    <div class="hero-inner">
-      <img class="cover" src="cover.png" alt="The Memory We Lost book cover">
-      <div class="hero-copy">
-        <div class="eyebrow">A psychological thriller by Midnight Scribbler</div>
-        <h1>The Memory<br>We Lost</h1>
-        <div class="author">by Midnight Scribbler</div>
-        <p class="tagline">Some memories aren't lost. They were taken.</p>
-        <div class="price">₹9</div>
+  <!-- STORE HEADER -->
 
-        <!-- PAYMENT BUTTON:
-             Replace # below with your Razorpay payment link later. -->
-       <button class="buy" id="buyButton" type="button">
-  BUY THE NOVEL — ₹9
-</button>
-        <div class="note">Digital PDF • 40 fast-moving chapters</div>
+  <header>
+    <div class="brand">The Origin 2026</div>
+    <div class="brand-subtitle">Stories worth getting lost in</div>
+  </header>
+
+  <!-- STORE INTRO -->
+
+  <main>
+
+```
+<section class="store-hero">
+  <h1>Our Books</h1>
+
+  <p>
+    Enter a collection of stories, mysteries, thrillers,
+    and worlds created to keep you reading.
+  </p>
+</section>
+
+
+<!-- BOOK COLLECTION -->
+
+<section class="books-section">
+
+  <div class="section-title">
+    <h2>Bookshelf</h2>
+    <p>Explore the collection</p>
+  </div>
+
+
+  <div class="books-grid">
+
+
+    <!-- BOOK 1: THE MEMORY WE LOST -->
+
+    <article class="book-card">
+
+      <div class="book-cover-container">
+        <img
+          class="book-cover"
+          src="cover.png"
+          alt="The Memory We Lost book cover"
+        >
       </div>
-    </div>
-  </main>
 
-  <section>
-    <div class="container">
-      <h2>The Story</h2>
-      <p class="description">
-        The Memory We Lost is a fast-paced psychological thriller centered on Ethan Carter,
-        a man forced to confront a past he has no memory of surviving. The night begins at
-        2:17 a.m. when Ethan receives a cryptic call and unsettling text messages from an
-        unknown sender warning him not to return to an old, isolated estate known as Blackwood.
-        Along with the warning comes a photograph of his own car parked outside the mysterious
-        house — and wet footprints left inside his apartment.
-      </p>
-      <p class="description">
-        Driven to uncover the truth, Ethan teams up with his neighbor Daniel and a woman from
-        his past, Claire. Together, they are drawn back to Blackwood and a hidden basement
-        facility known as "Room 17". As they navigate a trail of cassette tapes, classified
-        documents, and encrypted files linked to a covert initiative called "Project 17",
-        Ethan discovers that his memories were deliberately altered and that every answer
-        leads back to October 14, 2012.
-      </p>
-    </div>
-  </section>
+      <div class="book-info">
 
-  <section>
-    <div class="container">
-      <h2>Inside the Book</h2>
-      <div class="features">
-        <div class="feature">
-          <strong>Genre</strong>
-          Psychological Thriller / Mystery / Suspense
+        <div class="book-genre">
+          Psychological Thriller
         </div>
-        <div class="feature">
-          <strong>Core Themes</strong>
-          Altered memories, family secrets, corporate conspiracies, and identity
+
+        <h3 class="book-title">
+          The Memory We Lost
+        </h3>
+
+        <div class="book-author">
+          by Midnight Scribbler
         </div>
-        <div class="feature">
-          <strong>Format</strong>
-          Digital PDF
-        </div>
-        <div class="feature">
-          <strong>Chapters</strong>
-          40 fast-moving chapters
-        </div>
-        <div class="feature">
-          <strong>Price</strong>
+
+        <p class="book-description">
+          Some memories aren't lost. They were taken.
+
+          Ethan Carter is forced to confront a past he
+          has no memory of surviving when a mysterious
+          message leads him back to Blackwood.
+        </p>
+
+        <div class="book-price">
           ₹9
         </div>
-        <div class="feature">
-          <strong>For Readers Who Like</strong>
-          Dark suspense, memory-puzzle mysteries, and fast-paced thrillers
+
+        <button
+          class="buy"
+          id="buyButton"
+          type="button"
+        >
+          BUY THE NOVEL — ₹9
+        </button>
+
+        <div class="book-note">
+          Digital PDF • 40 fast-moving chapters
         </div>
+
       </div>
-    </div>
-  </section>
+    </article>
+
+
+    <!-- FUTURE BOOK PLACEHOLDER -->
+
+    <article class="book-card coming-soon">
+
+      <div class="coming-soon-content">
+
+        <span>Coming Soon</span>
+
+        <h3>New Story</h3>
+
+        <p>
+          Another story will appear here soon.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- FUTURE BOOK PLACEHOLDER -->
+
+    <article class="book-card coming-soon">
+
+      <div class="coming-soon-content">
+
+        <span>Coming Soon</span>
+
+        <h3>New Story</h3>
+
+        <p>
+          More books are on the way.
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <!-- FOOTER -->
 
   <footer>
-    © 2026 Midnight Scribbler · The Memory We Lost
+    © 2026 The Origin 2026 · Midnight Scribbler
   </footer>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-<script>
-  document.getElementById("buyButton").addEventListener("click", async function () {
-    const button = this;
+  <!-- RAZORPAY -->
 
-    button.disabled = true;
-    button.textContent = "Preparing payment...";
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-    try {
-      const response = await fetch(
-        "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/create-order",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({})
+  <script>
+
+    document
+      .getElementById("buyButton")
+      .addEventListener("click", async function () {
+
+        const button = this;
+
+        button.disabled = true;
+        button.textContent = "Preparing payment...";
+
+        try {
+
+          const response = await fetch(
+            "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/create-order",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json"
+              },
+
+              body: JSON.stringify({})
+            }
+          );
+
+
+          const order = await response.json();
+
+
+          if (!response.ok) {
+            throw new Error(
+              order.error || "Unable to create order"
+            );
+          }
+
+
+          const options = {
+
+            key: order.key_id,
+
+            amount: order.amount,
+
+            currency: order.currency,
+
+            name: "Midnight Scribbler",
+
+            description:
+              "The Memory We Lost — PDF",
+
+            order_id:
+              order.order_id,
+
+
+            handler: async function (response) {
+
+              try {
+
+                const verifyResponse =
+                  await fetch(
+                    "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/verify-payment",
+                    {
+                      method: "POST",
+
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+
+                      body: JSON.stringify({
+
+                        razorpay_order_id:
+                          response.razorpay_order_id,
+
+                        razorpay_payment_id:
+                          response.razorpay_payment_id,
+
+                        razorpay_signature:
+                          response.razorpay_signature
+
+                      })
+                    }
+                  );
+
+
+                const result =
+                  await verifyResponse.json();
+
+
+                if (
+                  !verifyResponse.ok ||
+                  !result.success
+                ) {
+
+                  throw new Error(
+                    result.error ||
+                    "Payment verification failed"
+                  );
+
+                }
+
+
+                window.location.href =
+                  result.download_url;
+
+
+              } catch (error) {
+
+                console.error(error);
+
+                alert(
+                  "Download error: " +
+                  error.message
+                );
+
+                button.disabled = false;
+
+                button.textContent =
+                  "BUY THE NOVEL — ₹9";
+
+              }
+
+            },
+
+
+            theme: {
+              color: "#b92320"
+            }
+
+          };
+
+
+          const rzp =
+            new Razorpay(options);
+
+
+          rzp.on(
+            "payment.failed",
+            function () {
+
+              button.disabled = false;
+
+              button.textContent =
+                "BUY THE NOVEL — ₹9";
+
+              alert(
+                "Payment failed. Please try again."
+              );
+
+            }
+          );
+
+
+          rzp.open();
+
+
+        } catch (error) {
+
+          console.error(error);
+
+          alert(
+            "Unable to start payment. Please try again."
+          );
+
+          button.disabled = false;
+
+          button.textContent =
+            "BUY THE NOVEL — ₹9";
+
         }
-      );
 
-      const order = await response.json();
-
-      if (!response.ok) {
-        throw new Error(order.error || "Unable to create order");
-      }
-
-      const options = {
-        key: order.key_id,
-        amount: order.amount,
-        currency: order.currency,
-        name: "Midnight Scribbler",
-        description: "The Memory We Lost — PDF",
-        order_id: order.order_id,
-
-      handler: async function (response) {
-  try {
-    const verifyResponse = await fetch(
-      "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/verify-payment",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          razorpay_order_id: response.razorpay_order_id,
-          razorpay_payment_id: response.razorpay_payment_id,
-          razorpay_signature: response.razorpay_signature
-        })
-      }
-    );
-
-    const result = await verifyResponse.json();
-
-    if (!verifyResponse.ok || !result.success) {
-     throw new Error(result.error || "Payment verification failed");
-    }
-
-    window.location.href = result.download_url;
-} catch (error) {
-  console.error(error);
-  alert("Download error: " + error.message);
-}
- 
-},
-
-        theme: {
-          color: "#b92320"
-        }
-      };
-
-      const rzp = new Razorpay(options);
-
-      rzp.on("payment.failed", function () {
-        button.disabled = false;
-        button.textContent = "BUY THE NOVEL — ₹9";
-        alert("Payment failed. Please try again.");
       });
 
-      rzp.open();
+  </script>
 
-    } catch (error) {
-      console.error(error);
-      alert("Unable to start payment. Please try again.");
-      button.disabled = false;
-      button.textContent = "BUY THE NOVEL — ₹9";
-    }
-  });
-</script>
 </body>
 </html>
