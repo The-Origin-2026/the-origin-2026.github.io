@@ -122,7 +122,11 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
-
+.book-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
     .book-card {
       background: #181818;
       border: 1px solid #292929;
@@ -348,9 +352,11 @@
 
     <!-- BOOK 1: THE MEMORY WE LOST -->
 
-    <article class="book-card">
+   <article class="book-card">
 
-      <div class="book-cover-container">
+  <a href="book.html" class="book-link">
+
+  <div class="book-cover-container">
         <img
           class="book-cover"
           src="cover.png"
@@ -383,7 +389,7 @@
         <div class="book-price">
           ₹9
         </div>
-
+        </a>
         <button
           class="buy"
           id="buyButton"
