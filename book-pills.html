@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,9 +108,11 @@
 
   <main class="book-page">
 
-    <img src="cover pills.jpg"
-         alt="The Life Between Two Pills cover"
-         class="cover">
+    <img
+      src="cover pills.jpg"
+      alt="The Life Between Two Pills cover"
+      class="cover"
+    >
 
     <h2>The Life Between Two Pills</h2>
 
@@ -161,9 +164,12 @@
 
     </div>
 
-    <a class="buy-button"
-       href="the life between two pills.pdf"
-       download>
+    <a
+      class="buy-button download-notify"
+      href="the life between two pills.pdf"
+      download
+      data-novel-name="The Life Between Two Pills"
+    >
       DOWNLOAD NOVEL
     </a>
 
@@ -176,6 +182,30 @@
   <footer>
     © Midnight Scribbler
   </footer>
+
+  <script>
+    document.querySelectorAll(".download-notify").forEach(button => {
+      button.addEventListener("click", function () {
+
+        const novelName = this.dataset.novelName;
+
+        fetch(
+          "https://ayslarimzqbenxdcanbl.supabase.co/functions/v1/notify-download",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ novelName }),
+            keepalive: true
+          }
+        ).catch(error => {
+          console.error("Notification failed:", error);
+        });
+
+      });
+    });
+  </script>
 
 </body>
 </html>
