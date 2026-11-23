@@ -3,135 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Life Between Two Pills — Midnight Scribbler</title>
+
+  <title>The Life Between Two Pills | Midnight Scribbler</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       background: #0b0b0b;
-      color: #e5e5e5;
+      color: #e8e8e8;
       font-family: Georgia, serif;
     }
 
     header {
       text-align: center;
-      padding: 35px 20px;
-      border-bottom: 1px solid #292929;
+      padding: 35px 20px 20px;
     }
 
     header h1 {
-      color: #b22222;
-      font-size: 28px;
       margin: 0;
-      letter-spacing: 2px;
+      font-size: 38px;
+      color: #b92320;
     }
 
     header p {
-      color: #888;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .back {
-      display: inline-block;
-      margin: 25px;
+      margin-top: 8px;
       color: #999;
-      text-decoration: none;
-    }
-
-    .back:hover {
-      color: #b22222;
-    }
-
-    .book {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      display: flex;
-      gap: 45px;
-      align-items: flex-start;
-    }
-
-    .cover {
-      width: 320px;
-      max-width: 100%;
-      border: 1px solid #333;
-      box-shadow: 0 0 25px rgba(150, 0, 0, 0.15);
-    }
-
-    .details {
-      flex: 1;
-    }
-
-    .genre {
-      color: #b22222;
-      letter-spacing: 2px;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: 36px;
-      line-height: 1.2;
-      margin-top: 15px;
-    }
-
-    .description {
-      color: #aaa;
-      line-height: 1.9;
       font-size: 16px;
     }
 
-    .download {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #8b0000;
-      color: white;
+    .book-page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cover {
+      width: 280px;
+      max-width: 85%;
+      border-radius: 4px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 35px;
+      margin-bottom: 8px;
+    }
+
+    .author {
+      color: #999;
+      font-size: 17px;
+    }
+
+    .description {
+      max-width: 700px;
+      margin: 30px auto;
+      line-height: 1.8;
+      color: #cfcfcf;
+      font-size: 17px;
+    }
+
+    .buy-button {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 30px;
+      background: #b92320;
+      color: #ffffff;
       text-decoration: none;
-      letter-spacing: 1px;
-      transition: 0.3s;
+      font-weight: bold;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
     }
 
-    .download:hover {
-      background: #b22222;
+    .buy-button:hover {
+      background: #d12b27;
     }
 
-    .free {
-      color: #777;
-      font-size: 13px;
-      margin-top: 15px;
+    .back {
+      display: block;
+      margin-top: 35px;
+      color: #888;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      color: #555;
-      border-top: 1px solid #222;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 700px) {
-      .book {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .cover {
-        width: 280px;
-      }
-
-      .details {
-        text-align: center;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
+      padding: 40px 20px;
+      color: #666;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -139,55 +101,77 @@
 <body>
 
   <header>
-    <h1>MIDNIGHT SCRIBBLER</h1>
+    <h1>Midnight Scribbler</h1>
     <p>Stories worth getting lost in</p>
   </header>
 
-  <a href="index.html" class="back">← Back to Home</a>
-
-  <section class="book">
+  <main class="book-page">
 
     <img src="cover pills.jpg"
          alt="The Life Between Two Pills cover"
          class="cover">
 
-    <div class="details">
+    <h2>The Life Between Two Pills</h2>
 
-      <p class="genre">Drama · Mystery</p>
+    <div class="author">
+      By Midnight Scribbler
+    </div>
 
-      <h2>The Life Between Two Pills</h2>
+    <div class="description">
 
-      <p class="description">
-        One final day. Two pills. A truth hidden behind silence.
+      <div class="genre">
+        <strong>Genre:</strong> Drama • Mystery
+      </div>
+
+      <p>
+        <strong>About the Book</strong>
       </p>
 
-      <p class="description">
-        Julian is twenty-one, and time is running out. As he faces what
-        may be his final day, a mysterious arrangement with his doctor
-        leaves questions no one seems willing to answer.
+      <p>
+        Julian is twenty-one, and time is running out.
+        He has only one day left, yet he wants to spend it
+        as though nothing has changed.
       </p>
 
-      <p class="description">
-        Between family, old memories, and someone who has always been
-        closer than words could explain, Julian tries to make the most
-        of the time he has left.
+      <p>
+        Behind a mysterious arrangement involving two pills
+        and his doctor lies a truth Julian is trying to keep
+        hidden from the people closest to him.
       </p>
 
-      <p class="description">
-        But some truths are harder to swallow than any pill.
+      <p>
+        Between his family, old memories, and Elena,
+        someone who has been part of his life for years,
+        Julian tries to make the most of the time he has left.
       </p>
 
-      <a href="The Life Between Two Pills.pdf"
-         class="download"
-         download>
-        DOWNLOAD NOVEL
-      </a>
+      <p>
+        But as the day unfolds, silence begins to reveal
+        more than words ever could.
+      </p>
 
-      <p class="free">A free digital novel · PDF</p>
+      <p>
+        <strong>Book Details</strong>
+      </p>
+
+      <p>
+        Format: Digital PDF<br>
+        Language: English
+      </p>
 
     </div>
 
-  </section>
+    <a class="buy-button"
+       href="The Life Between Two Pills.pdf"
+       download>
+      DOWNLOAD NOVEL
+    </a>
+
+    <a href="index.html" class="back">
+      ← Back to Midnight Scribbler
+    </a>
+
+  </main>
 
   <footer>
     © Midnight Scribbler
