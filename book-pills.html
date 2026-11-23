@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Life Between Two Pills — Midnight Scribbler</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #e5e5e5;
+      font-family: Georgia, serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px;
+      border-bottom: 1px solid #292929;
+    }
+
+    header h1 {
+      color: #b22222;
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #888;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .back {
+      display: inline-block;
+      margin: 25px;
+      color: #999;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: #b22222;
+    }
+
+    .book {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      gap: 45px;
+      align-items: flex-start;
+    }
+
+    .cover {
+      width: 320px;
+      max-width: 100%;
+      border: 1px solid #333;
+      box-shadow: 0 0 25px rgba(150, 0, 0, 0.15);
+    }
+
+    .details {
+      flex: 1;
+    }
+
+    .genre {
+      color: #b22222;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-top: 15px;
+    }
+
+    .description {
+      color: #aaa;
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .download {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #8b0000;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .download:hover {
+      background: #b22222;
+    }
+
+    .free {
+      color: #777;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 700px) {
+      .book {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cover {
+        width: 280px;
+      }
+
+      .details {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MIDNIGHT SCRIBBLER</h1>
+    <p>Stories worth getting lost in</p>
+  </header>
+
+  <a href="index.html" class="back">← Back to Home</a>
+
+  <section class="book">
+
+    <img src="cover-pills.jpg"
+         alt="The Life Between Two Pills cover"
+         class="cover">
+
+    <div class="details">
+
+      <p class="genre">Drama · Mystery</p>
+
+      <h2>The Life Between Two Pills</h2>
+
+      <p class="description">
+        One final day. Two pills. A truth hidden behind silence.
+      </p>
+
+      <p class="description">
+        Julian is twenty-one, and time is running out. As he faces what
+        may be his final day, a mysterious arrangement with his doctor
+        leaves questions no one seems willing to answer.
+      </p>
+
+      <p class="description">
+        Between family, old memories, and someone who has always been
+        closer than words could explain, Julian tries to make the most
+        of the time he has left.
+      </p>
+
+      <p class="description">
+        But some truths are harder to swallow than any pill.
+      </p>
+
+      <a href="The Life Between Two Pills.pdf"
+         class="download"
+         download>
+        DOWNLOAD NOVEL
+      </a>
+
+      <p class="free">A free digital novel · PDF</p>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © Midnight Scribbler
+  </footer>
+
+</body>
+</html>
